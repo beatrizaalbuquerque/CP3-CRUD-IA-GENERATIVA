@@ -7,13 +7,10 @@ ChatGPT
 DeepSeek
 
 
-Prompt utilizado: Preciso desenvolver uma aplicação web para uma atividade da faculdade utilizando HTML, CSS e JavaScript.
-Crie um sistema com tela de login e uma lista de filmes assistidos. Após o login, o usuário deve conseguir adicionar filmes no início e no final da lista, editar filmes e remover filmes.
-Utilize um array de strings para armazenar os dados e faça as validações necessárias para não permitir campos vazios.
-Separe a solução em HTML, CSS e JavaScript.
+Prompt utilizado: Preciso desenvolver uma aplicação web para uma atividade da faculdade utilizando HTML, CSS e JavaScript. Crie um sistema com tela de login e uma lista de filmes assistidos. Após o login, o usuário deve conseguir adicionar filmes no início e no final da lista, editar filmes e remover filmes. Utilize um array de strings para armazenar os dados e faça as validações necessárias para não permitir campos vazios.
+Separe a solução em HTML, CSS e JavaScript. A entrada deve funcionar com as seguintes informações: Usuário:aluno, Senha:fiap2025.
 
 Análise das respostas
-
 Claude:
 
 Pontos positivos:
