@@ -1,0 +1,373 @@
+/* ==========================================
+   RESET E BASE
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --preto: #0d0d0d;
+  --cinza-escuro: #1a1a1a;
+  --cinza-medio: #2a2a2a;
+  --cinza-borda: #3a3a3a;
+  --dourado: #e8c84a;
+  --branco: #f5f5f0;
+  --branco-suave: #d4d4cc;
+  --vermelho: #e05252;
+  --fonte-titulo: 'Georgia', serif;
+  --fonte-corpo: 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--preto);
+  color: var(--branco);
+  font-family: var(--fonte-corpo);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.escondido {
+  display: none !important;
+}
+
+/* LOGIN */
+
+#tela-login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 20%, #1a1200 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, #1a0a00 0%, transparent 60%),
+    var(--preto);
+}
+
+.login-box {
+  background: var(--cinza-escuro);
+  border: 1px solid var(--cinza-borda);
+  border-top: 3px solid var(--dourado);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 4px;
+}
+
+.login-logo {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-box h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  text-align: center;
+  color: var(--dourado);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.login-sub {
+  text-align: center;
+  color: var(--branco-suave);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+
+/* CAMPOS */
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--branco-suave);
+  margin-bottom: 6px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--cinza-medio);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 3px;
+  color: var(--branco);
+  font-family: var(--fonte-corpo);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--dourado);
+}
+
+.campo input::placeholder {
+  color: #555;
+}
+
+/* BOTÕES */
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--dourado);
+  color: var(--preto);
+  border: none;
+  border-radius: 3px;
+  font-family: var(--fonte-corpo);
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #f0d660;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--dourado);
+  border: 1px solid var(--dourado);
+}
+
+.btn-secundario:hover {
+  background: rgba(232, 200, 74, 0.1);
+}
+
+/* ERROS */
+
+.mensagem-erro {
+  background: rgba(224, 82, 82, 0.15);
+  border: 1px solid var(--vermelho);
+  color: #f08080;
+  padding: 10px 14px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* TELA DA LISTA */
+
+#tela-lista {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 80% 10%, #1a1200 0%, transparent 50%),
+    var(--preto);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--cinza-borda);
+  background: var(--cinza-escuro);
+}
+
+.header-esq {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-small {
+  font-size: 1.4rem;
+}
+
+header h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--dourado);
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.btn-sair {
+  width: auto;
+  padding: 6px 20px;
+  background: transparent;
+  color: var(--branco-suave);
+  border: 1px solid var(--cinza-borda);
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+.btn-sair:hover {
+  border-color: var(--vermelho);
+  color: var(--vermelho);
+  background: transparent;
+}
+
+main {
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* SEÇÃO ADICIONAR */
+
+.adicionar-box {
+  background: var(--cinza-escuro);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.adicionar-box h3,
+.lista-box h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 20px;
+}
+
+.botoes-adicionar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.botoes-adicionar button {
+  margin-top: 0;
+}
+
+/* LISTA */
+
+.lista-box {
+  background: var(--cinza-escuro);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 4px;
+  padding: 28px;
+}
+
+#contador {
+  color: var(--branco-suave);
+  font-family: var(--fonte-corpo);
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+#lista-filmes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-filme {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--cinza-medio);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 3px;
+  transition: border-color 0.2s;
+}
+
+.item-filme:hover {
+  border-color: #555;
+}
+
+.item-numero {
+  color: var(--dourado);
+  font-size: 0.8rem;
+  min-width: 22px;
+  text-align: right;
+}
+
+.item-texto {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--branco);
+}
+
+.item-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-editar,
+.btn-remover {
+  width: auto;
+  padding: 5px 14px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  border-radius: 3px;
+}
+
+.btn-editar {
+  background: transparent;
+  color: var(--dourado);
+  border: 1px solid var(--dourado);
+}
+
+.btn-editar:hover {
+  background: rgba(232, 200, 74, 0.1);
+}
+
+.btn-remover {
+  background: transparent;
+  color: var(--vermelho);
+  border: 1px solid var(--vermelho);
+}
+
+.btn-remover:hover {
+  background: rgba(224, 82, 82, 0.1);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 36px 24px;
+    margin: 16px;
+  }
+
+  main {
+    padding: 0 16px;
+    margin: 24px auto;
+  }
+
+  .botoes-adicionar {
+    grid-template-columns: 1fr;
+  }
+
+  .item-botoes {
+    flex-direction: column;
+  }
+}

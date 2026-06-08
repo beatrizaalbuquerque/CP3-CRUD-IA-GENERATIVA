@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineLog — Meus Filmes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="tela-login">
+    <div class="login-box">
+      <div class="login-logo">🎬</div>
+      <h1>CineLog</h1>
+      <p class="login-sub">Sua lista de filmes assistidos</p>
+
+      <div id="erro-login" class="mensagem-erro escondido">
+        Usuário ou senha incorretos.
+      </div>
+
+      <div class="campo">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" placeholder="Digite seu usuário" />
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" />
+      </div>
+
+      <button onclick="fazerLogin()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- TELA DA LISTA -->
+  <div id="tela-lista" class="escondido">
+    <header>
+      <div class="header-esq">
+        <span class="logo-small">🎬</span>
+        <h2>CineLog</h2>
+      </div>
+      <button class="btn-sair" onclick="fazerLogout()">Sair</button>
+    </header>
+
+    <main>
+      <section class="adicionar-box">
+        <h3>Adicionar Filme</h3>
+
+        <div id="erro-item" class="mensagem-erro escondido">
+          O nome do filme não pode ser vazio.
+        </div>
+
+        <div class="campo">
+          <label for="novo-item">Nome do filme</label>
+          <input type="text" id="novo-item" placeholder="Ex: Interestelar" />
+        </div>
+
+        <div class="botoes-adicionar">
+          <button onclick="adicionarNoFinal()">+ Adicionar ao Final</button>
+          <button class="btn-secundario" onclick="adicionarNoInicio()">+ Adicionar ao Início</button>
+        </div>
+      </section>
+
+      <section class="lista-box">
+        <h3>Filmes Assistidos <span id="contador"></span></h3>
+        <ul id="lista-filmes"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
