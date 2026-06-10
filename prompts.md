@@ -20,7 +20,7 @@ Separação clara das funções.
 Atendeu todos os requisitos da atividade.
 
 Ponto negativo:
-Código um pouco maior que os demais.
+Código um pouco maior que os outros.
 
 ChatGPT:
 
@@ -33,7 +33,7 @@ Interface mais básica.
 Menos recursos visuais.
 Estrutura mais simples.
 
-DeepSeek
+DeepSeek:
 
 Pontos positivos:
 Interface moderna.
